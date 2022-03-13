@@ -1,5 +1,6 @@
 (sym_lib_table
-  (lib (name "MCU")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_RP2040/KiCAD/2022-03-01_19-25-05/MCU_RaspberryPi_RP2040.lib")(options "")(descr ""))
-  (lib (name "CAN IC")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_MCP2518FDT-H-SL/KiCAD/2022-03-01_19-36-37/2022-03-01_19-36-37.lib")(options "")(descr ""))
-  (lib (name "TRANSCEIVER")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_MCP2561FD-E-SN/KiCAD/2022-03-01_22-36-22/2022-03-01_22-36-22.lib")(options "")(descr ""))
+  (lib (name "MCU")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_RP2040/KiCAD/2022-03-01_19-25-05/MCU_RaspberryPi_RP2040.kicad_sym")(options "")(descr ""))
+  (lib (name "CAN IC")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_MCP2518FDT-H-SL/KiCAD/2022-03-01_19-36-37/2022-03-01_19-36-37.kicad_sym")(options "")(descr ""))
+  (lib (name "TRANSCEIVER")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_MCP2561FD-E-SN/KiCAD/2022-03-01_22-36-22/2022-03-01_22-36-22.kicad_sym")(options "")(descr ""))
+  (lib (name "FLASH")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_W25Q16JVSNIQ/KiCAD/2022-03-02_03-45-10/2022-03-02_03-45-10.kicad_sym")(options "")(descr ""))
 )

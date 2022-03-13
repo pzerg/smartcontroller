@@ -1,0 +1,116 @@
+FRC teardown
+https://imgur.com/gallery/2xqoU
+
+current sense amplifiers over PWM
+-use an RC filter to filter out PWM noise
+https://www.maximintegrated.com/en/design/technical-documents/app-notes/5/5073.html
+-used in the PDP
+https://www.maximintegrated.com/en/products/analog/amplifiers/MAX4378.html
+
+mux/demux to replace AND/INVERTER
+https://www.digikey.com/en/products/detail/onsemi/NC7SB3257P6X/965420
+
+Zener diode to replace voltage divider
+https://www.digikey.com/en/products/detail/nexperia-usa-inc/PLVA650A-215/1163688
+
+motor controller driver 
+-TI H bridge driver, takes 4 PWM inputs
+https://www.ti.com/store/ti/en/p/product/?p=DRV8770RGER
+-Allego MicroSystems H bridge driver (out of stock)
+https://www.digikey.com/en/products/detail/allegro-microsystems/A4957SESTR-T/3770630?s=N4IgTCBcDaIIIBYCcBWA7CAugXyA
+
+CAN MCU
+-family used in the Talon SRX
+https://www.microchip.com/en-us/product/dsPIC33EP512GP506 (might not have CAN)
+https://www.digikey.com/en/products/detail/microchip-technology/DSPIC33EP64GS804T-I-ML/6592388 (probably has CAN)
+
+dsPIC33 memory arch
+https://ww1.microchip.com/downloads/en/DeviceDoc/70005156b.pdf
+dsPIC33 datasheet 
+https://ww1.microchip.com/downloads/en/DeviceDoc/dsPIC33EPXXXGS70X-80X-Family-Data-Sheet-DS70005258C.pdf
+
+different dsPIC33
+https://www.mouser.com/datasheet/2/268/70291G-254604.pdf
+https://www.mouser.com/ProductDetail/Microchip-Technology/dsPIC33FJ64MC202-I-MM?qs=nMCt4TBfEwoEKsW4xAucmQ%3D%3D
+
+-used in FRC PCM
+https://www.mouser.com/ProductDetail/Microchip-Technology/dsPIC33FJ64MC202-I-MM?qs=nMCt4TBfEwoEKsW4xAucmQ%3D%3D
+-atmega CAN controller (out of stock)
+https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7647-Automotive-Microcontrollers-ATmega16M1-32M1-64M1-32C1-64C1_datasheet.pdf
+
+studying
+MOSFET gate drivers - https://www.ti.com/lit/ml/slua618a/slua618a.pdf?ts=1643983378520
+Motor controller layout - https://www.ti.com/lit/an/slva959b/slva959b.pdf?ts=1643933844188
+Talon SRX layout - https://www.youtube.com/watch?v=syS5R_xYtRk
+
+current sense
+wide resistors - https://www.digikey.com/en/products/detail/susumu/PRL1632-R005-F-T1/948787
+metal shunt - https://www.digikey.com/en/products/detail/bourns-inc/CSS2H-2512K-3L00F/6023763
+
+
+which serial protocol?
+I2C pros
+-not programmatically difficult to implement
+-very common on micro controllers
+-allows theoretically upe to 128 devices over just 2 lines
+-synchronous, only need 1 clock for master
+
+I2C cons
+-bus capacitance limit limits real number of devices to less than 128 and severely limits bus size (BIG ISSUE)
+-only 1 transfer at a time (idk if a big deal or not)
+-limited error reduction (not really a big deal)
+-only master can initiate transfers (not really a big deal)
+-limited speed (not really a big deal)
+
+CAN pros
+-modern standard
+-fast data rates
+-transfer can be initiated by any device on the bus 
+-differential signals
+-very error resistant
+-many devices (2048, more than we need)
+
+CAN cons
+-significantly more difficult to implement (not sure if/how the Teensy uses CAN)
+-not quite as common on MCUs
+-asynchonous (each device needs its own clock)
+
+SPI pros
+-very common on MCUs
+-pretty easy to implement (no device identifiers)
+-no limit on number of devices
+-synchronous (only needs one clock)
+-flexible in terms of data transfer (I2C only does 8 bit chunks)
+-slaves do not requires unique addresses
+
+SPI cons
+-requires extra wires for each device for SS (issue can be reduced with multiplexer but still present)
+-requires at LEAST 4 wires (CAN and I2C only need 2)
+-can only communicate with one device at a time
+-no error checking protocol defined at all
+-short distances (how short? who knows)
+
+CAN stuff
+can transceiver
+-https://www.microchip.com/en-us/product/MCP2551
+https://www.microchip.com/en-us/product/MCP2561
+standalone CAN controller
+https://ww1.microchip.com/downloads/en/DeviceDoc/21291F.pdf
+
+can example
+https://forum.digikey.com/t/can-example-atmega32m1-stk600/13039
+
+
+potential parts
+TI CAN Transceiver (3.3V operation!!!) - https://www.ti.com/lit/ds/symlink/tcan330.pdf
+CAN MCU - https://www.microchip.com/en-us/product/PIC18F25K80
+PIC series Microchip (dsPIC was listed above, PIC is likely to be cheaper, though less powerful)
+ATmega M series (out of stock)
+MAX3051 (IN STOCK!!!) - https://datasheets.maximintegrated.com/en/ds/MAX3051.pdf
+
+dream controller
+CAN FD controller - https://ww1.microchip.com/downloads/en/DeviceDoc/External-CAN-FD-Controller-with-SPI-Interface-DS20006027B.pdf
+MCU - https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
+CAN Transciever - https://ww1.microchip.com/downloads/en/DeviceDoc/20005284A.pdf
+gate driver = https://www.ti.com/product/DRV8770
+Flash memory - https://www.winbond.com/resource-files/w25q16jv%20spi%20revg%2003222018%20plus.pdf (https://www.digikey.com/en/products/detail/winbond-electronics/W25Q16JVSSIQ-TR/6193775)
