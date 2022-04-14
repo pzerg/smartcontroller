@@ -117,9 +117,19 @@ dream controller
 CAN FD controller - https://ww1.microchip.com/downloads/en/DeviceDoc/External-CAN-FD-Controller-with-SPI-Interface-DS20006027B.pdf
 MCU - https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf
 CAN Transciever - https://ww1.microchip.com/downloads/en/DeviceDoc/20005284A.pdf
-gate driver = https://www.ti.com/product/DRV8770
+gate driver - https://www.ti.com/product/DRV8770
 Flash memory - https://www.winbond.com/resource-files/w25q16jv%20spi%20revg%2003222018%20plus.pdf (https://www.digikey.com/en/products/detail/winbond-electronics/W25Q16JVSSIQ-TR/6193775)
 12 MHz crystal - https://www.digikey.com/en/products/detail/txc-corporation/AM-12-000MAGE-T/3459308
+MOSFET - https://www.vishay.com/docs/66840/sir500dp.pdf
+3.3V LDO - https://www.digikey.com/en/products/detail/onsemi/NCP1117LPST33T3G/2194024
+Source Selector IC - https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX40203AUK-T/10447227
+
+RP2040 hardware pwm code - https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__pwm.html
+
 
 calculations
 CL = (C1 * C2) / (C1 + C2) + Cstray, Cstray = ~4pF, CL = 12pF (from datasheet), C1, C2 = 14pF
+
+Vbstx = 15V - 0.85V - 4.5V = 9.65
+Qtot = 54.3nC + (220uA / 1kHz) = 54.3nC + 220nC = 274 nC
+Cbst_min = Qtot/Vbstx = 30nF (use 100nF)

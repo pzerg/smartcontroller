@@ -3,4 +3,6 @@
   (lib (name "CAN IC")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_MCP2518FDT-H-SL/KiCAD/2022-03-01_19-36-37/2022-03-01_19-36-37.kicad_sym")(options "")(descr ""))
   (lib (name "TRANSCEIVER")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_MCP2561FD-E-SN/KiCAD/2022-03-01_22-36-22/2022-03-01_22-36-22.kicad_sym")(options "")(descr ""))
   (lib (name "FLASH")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_W25Q16JVSNIQ/KiCAD/2022-03-02_03-45-10/2022-03-02_03-45-10.kicad_sym")(options "")(descr ""))
+  (lib (name "DRIVER")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_DRV8770RGER/KiCAD/2022-04-10_21-46-10/2022-04-10_21-46-10.lib")(options "")(descr ""))
+  (lib (name "SOURCE SELECT")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_MAX40203AUK-T/KiCAD/2022-04-14_18-21-17/2022-04-14_18-21-17.lib")(options "")(descr ""))
 )
