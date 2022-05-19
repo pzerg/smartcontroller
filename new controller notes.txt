@@ -124,9 +124,10 @@ MOSFET - https://www.vishay.com/docs/66840/sir500dp.pdf
 3.3V LDO - https://www.digikey.com/en/products/detail/onsemi/NCP1117LPST33T3G/2194024
 Source Selector IC - https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX40203AUK-T/10447227
 Current sense amp - https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX4073TAUT/12114365
-Current shunt (3mOhm) -
+Current shunt (3mOhm) - https://www.digikey.com/en/products/detail/stackpole-electronics-inc/CSNL2512FT3L00/1646113
+USB - https://www.mouser.com/ProductDetail/Amphenol-FCI/10118194-0001LF?qs=Ywefl8B65e4FIdY8OWfRQA%3D%3D
 
-
+Alternative shunt (higher power) - https://www.digikey.com/en/products/detail/te-connectivity-passive-product/TLRS105025ER004FTDG/4489887
 DRV8770RGER in stock - https://cn.jinftry.com/product_detail/DRV8770RGER (bruh moment)
 RP2040 hardware pwm code - https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__pwm.html
 
@@ -137,3 +138,7 @@ CL = (C1 * C2) / (C1 + C2) + Cstray, Cstray = ~4pF, CL = 12pF (from datasheet), 
 Vbstx = 15V - 0.85V - 4.5V = 9.65
 Qtot = 54.3nC + (220uA / 1kHz) = 54.3nC + 220nC = 274 nC
 Cbst_min = Qtot/Vbstx = 30nF (use 100nF)
+
+
+PCB notes
+    add some way to put RP2040 in bootloader mode

@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "DRIVER")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_DRV8770RGER/KiCAD/2022-04-10_21-46-10/footprints.pretty")(options "")(descr ""))
+  (lib (name "RP2040")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_RP2040/KiCAD/2022-03-01_19-25-05/footprints.pretty")(options "")(descr ""))
+  (lib (name "MOSFET")(type "KiCad")(uri "${KIPRJMOD}/Libraries/MOSFET.pretty")(options "")(descr ""))
+)
