@@ -1,0 +1,5 @@
+/home/pzerg/pico_projects/spi_slave/build/elf2uf2/CMakeFiles/elf2uf2.dir
+/home/pzerg/pico_projects/spi_slave/build/elf2uf2/CMakeFiles/edit_cache.dir
+/home/pzerg/pico_projects/spi_slave/build/elf2uf2/CMakeFiles/rebuild_cache.dir
+/home/pzerg/pico_projects/spi_slave/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
+/home/pzerg/pico_projects/spi_slave/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
