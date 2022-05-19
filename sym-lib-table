@@ -5,4 +5,5 @@
   (lib (name "FLASH")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ul_W25Q16JVSNIQ/KiCAD/2022-03-02_03-45-10/2022-03-02_03-45-10.kicad_sym")(options "")(descr ""))
   (lib (name "DRIVER")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_DRV8770RGER/KiCAD/2022-04-10_21-46-10/2022-04-10_21-46-10.lib")(options "")(descr ""))
   (lib (name "SOURCE SELECT")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ul_MAX40203AUK-T/KiCAD/2022-04-14_18-21-17/2022-04-14_18-21-17.lib")(options "")(descr ""))
+  (lib (name "CURRENT_AMP")(type "KiCad")(uri "${KIPRJMOD}/Libraries/CURRENT_AMP.kicad_sym")(options "")(descr ""))
 )

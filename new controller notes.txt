@@ -123,7 +123,11 @@ Flash memory - https://www.winbond.com/resource-files/w25q16jv%20spi%20revg%2003
 MOSFET - https://www.vishay.com/docs/66840/sir500dp.pdf
 3.3V LDO - https://www.digikey.com/en/products/detail/onsemi/NCP1117LPST33T3G/2194024
 Source Selector IC - https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX40203AUK-T/10447227
+Current sense amp - https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX4073TAUT/12114365
+Current shunt (3mOhm) -
 
+
+DRV8770RGER in stock - https://cn.jinftry.com/product_detail/DRV8770RGER (bruh moment)
 RP2040 hardware pwm code - https://raspberrypi.github.io/pico-sdk-doxygen/group__hardware__pwm.html
 
 
